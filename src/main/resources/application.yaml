@@ -1,0 +1,47 @@
+spring:
+  #profiles:
+  #active: dev
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: shwetalishine@gmail.com
+    password: ingveymskronqngx
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  kafka:
+    listener:
+      ack-mode: MANUAL_IMMEDIATE
+    consumer:
+      bootstrap-servers: 192.168.56.102:30092
+      group-id: email-group
+      auto-offset-reset: earliest
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: '*'
+
+#  kafka:
+#    bootstrapAddress: 192.168.56.102:30092
+#    #    bootstrap-servers: [ "kafka-2.default.svc.cluster.local:9092" ] #bootstrap server config for kubernetes
+#    producer:
+#      #      bootstrap-servers: [ "kafka-2.default.svc.cluster.local:9092" ] #bootstrap server config for kubernetes
+#      key-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+#      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+#    consumer:
+#      #      bootstrap-servers: [ "kafka-2.default.svc.cluster.local:9092" ] #bootstrap server config for kubernetes
+#      key-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+#      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+#      auto-offset-reset: earliest
+#      properties:
+#        spring:
+#          json:
+#            trusted:
+#              packages: '*'
+#
