@@ -1,3 +1,4 @@
+/*
 package com.example.demo.configuration;
 
 
@@ -21,7 +22,8 @@ import java.util.Map;
 @Configuration
 public class KafkaConfigurationConsumer {
 
-    /*
+    */
+/*
     @Bean
     ConcurrentKafkaListenerContainerFactory<Integer, String>
     kafkaListenerContainerFactory(ConsumerFactory<Integer, String> consumerFactory) {
@@ -46,7 +48,8 @@ public class KafkaConfigurationConsumer {
         // ...
         return props;
     }
-*/
+*//*
+
 
   @Bean
     public ConsumerFactory<String, BookingRequest> bookingConsumerFactory() {
@@ -75,3 +78,4 @@ public class KafkaConfigurationConsumer {
     }
 
 }
+*/
