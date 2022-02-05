@@ -4,7 +4,7 @@ FROM openjdk:11
 
 #CMD keytool -importcert -file /etc/ssl/certs/my-break-booking.crt -cacerts -alias "my-booking-certificate" -storepass changeit
 
-ADD target/demo-0.0.1-SNAPSHOT.jar app.jar
+ADD target/email-svc-0.0.1-SNAPSHOT.jar app.jar
 
 ENTRYPOINT ["java", "-jar", "app.jar"]
 
